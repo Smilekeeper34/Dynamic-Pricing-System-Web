@@ -19917,6 +19917,11 @@ fieldset:disabled .btn {
     -webkit-transform: rotate(-135deg) translate(0, -50%);
     transform: rotate(-135deg) translate(0, -50%)
 }
+.active {
+    color: #5D87FF; /* Active link color */
+    background-color: rgba(93, 135, 255, 0.1); /* Active link background */
+  }
+  
 
 .app-header {
     position: relative;
@@ -20251,7 +20256,13 @@ fieldset:disabled .btn {
     -webkit-transition: 0.2s ease-in;
     transition: 0.2s ease-in
 }
-
+.body-container{
+    padding-top: 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in
+}
 @media (max-width:767.98px) {
 
     .body-wrapper>.container-fluid,

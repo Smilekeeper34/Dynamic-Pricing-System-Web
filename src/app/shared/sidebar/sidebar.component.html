@@ -12,22 +12,34 @@
   <aside class="left-sidebar">
     <!-- Sidebar scroll-->
     <div>
-      <div class="brand-logo d-flex align-items-center justify-content-between" >
-        <a routerLink="dashboard" class="text-nowrap logo-img mt-05" style="margin-top: 12%;" >
-          <img src="../assets/images/logos/logo.png" width="180" alt="" style="width:60%; margin-left: 30%;" />
+      <div class="brand-logo d-flex align-items-center justify-content-between">
+        <a
+          routerLink="dashboard"
+          class="text-nowrap logo-img mt-05"
+          style="margin-top: 12%"
+        >
+          <img
+            src="../assets/images/logos/logo.png"
+            width="180"
+            alt=""
+            style="width: 60%; margin-left: 30%"
+          />
         </a>
-        
       </div>
       <!-- Sidebar navigation-->
       <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
         <ul id="sidebarnav">
           <li class="nav-small-cap">
-            
             <i class="lni lni-grid-alt nav-small-cap-icon fs-4"></i>
             <span class="hide-menu">Home</span>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" routerLink="dashboard" aria-expanded="false">
+            <a
+              class="sidebar-link"
+              routerLink="dashboard"
+              aria-expanded="false"
+              routerLinkActive="active"
+            >
               <span>
                 <i class="lni lni-grid-alt"></i>
               </span>
@@ -35,12 +47,16 @@
             </a>
           </li>
           <li class="nav-small-cap">
-            
             <i class="lni lni-grid-alt nav-small-cap-icon fs-4"></i>
             <span class="hide-menu">Products</span>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" routerLink="products" aria-expanded="false">
+            <a
+              class="sidebar-link"
+              routerLink="products"
+              aria-expanded="false"
+              routerLinkActive="active"
+            >
               <span>
                 <i class="lni lni-layers"></i>
               </span>
@@ -48,7 +64,12 @@
             </a>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" routerLink="products" aria-expanded="false">
+            <a
+              class="sidebar-link"
+              routerLink="add-product"
+              aria-expanded="false"
+              routerLinkActive="active"
+            >
               <span>
                 <i class="lni lni-add-files"></i>
               </span>
@@ -56,12 +77,16 @@
             </a>
           </li>
           <li class="nav-small-cap">
-            
             <i class="lni lni-grid-alt nav-small-cap-icon fs-4"></i>
             <span class="hide-menu">Products Analysis</span>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" routerLink="products" aria-expanded="false">
+            <a
+              class="sidebar-link"
+              routerLink="inventory-chart"
+              aria-expanded="false"
+              routerLinkActive="active"
+            >
               <span>
                 <i class="lni lni-graph"></i>
               </span>
@@ -69,7 +94,12 @@
             </a>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" routerLink="products" aria-expanded="false">
+            <a
+              class="sidebar-link"
+              routerLink="sales-chart"
+              aria-expanded="false"
+              routerLinkActive="active"
+            >
               <span>
                 <i class="lni lni-bar-chart"></i>
               </span>
@@ -77,28 +107,36 @@
             </a>
           </li>
           <li class="nav-small-cap">
-            
             <i class="lni lni-grid-alt nav-small-cap-icon fs-4"></i>
             <span class="hide-menu">Reports</span>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" routerLink="products" aria-expanded="false">
+            <a
+              class="sidebar-link"
+              routerLink="sales-report"
+              aria-expanded="false"
+              routerLinkActive="active"
+            >
               <span>
                 <i class="lni lni-files"></i>
               </span>
               <span class="hide-menu">Sales Report</span>
             </a>
           </li>
-          <li class="sidebar-item">
-            <a class="sidebar-link" routerLink="products" aria-expanded="false">
+          <!-- <li class="sidebar-item">
+            <a
+              class="sidebar-link"
+              routerLink="sales-report"
+              aria-expanded="false"
+              routerLinkActive="active"
+            >
               <span>
                 <i class="lni lni-files"></i>
               </span>
               <span class="hide-menu">Product Report</span>
             </a>
-          </li>
+          </li> -->
         </ul>
-      
       </nav>
       <!-- End Sidebar navigation -->
     </div>

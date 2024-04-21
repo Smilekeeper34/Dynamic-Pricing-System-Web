@@ -1,6 +1,16 @@
-<app-sidebar />
+<div
+  class="page-wrapper"
+  id="main-wrapper"
+  data-layout="vertical"
+  data-navbarbg="skin6"
+  data-sidebartype="full"
+  data-sidebar-position="fixed"
+  data-header-position="fixed"
+>
+  <app-sidebar />
 
-<div class="body-wrapper">
-  
-  <router-outlet />
+  <div class="body-wrapper">
+    <!-- <app-header-bar/> -->
+    <router-outlet />
+  </div>
 </div>

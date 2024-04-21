@@ -1,1 +1,15 @@
-<p>invetory-chart works!</p>
+<div class="body-container">
+  <div class="container-fluid">
+    <div class="card">
+      <div id="chart">
+        <apx-chart
+          [series]="chartOptions.series"
+          [chart]="chartOptions.chart"
+          
+          [plotOptions]="chartOptions.plotOptions"
+          [xaxis]="chartOptions.xaxis"
+        ></apx-chart>
+      </div>
+    </div>
+  </div>
+</div>

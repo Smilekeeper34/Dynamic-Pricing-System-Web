@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
        // Authentication logic here (e.g., send data to server)
        const formData = this.loginForm.value;
        console.log('Login data:', formData);
-       this.router.navigate(['/dashboard']);
+       this.router.navigate(['/admin/dashboard']);
     }
   }
 }

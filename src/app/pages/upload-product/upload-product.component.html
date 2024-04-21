@@ -1,1 +1,138 @@
-<p>upload-product works!</p>
+<div class="body-container">
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title fw-semibold mb-4">Add Product</h5>
+        <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="mb-3">
+                <label for="productName" class="form-label">Product Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="productName"
+                  aria-describedby="productNameHelp"
+                formControlName="productName"
+                />
+                <div id="productNameHelp" class="form-text">
+                  Enter the name of the product.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="mb-3">
+                <label for="productPrice" class="form-label"
+                  >Product Price</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="productPrice"
+                  aria-describedby="productPriceHelp"
+                  formControlName="productPrice"
+                />
+                <div id="productPriceHelp" class="form-text">
+                  Enter the price of the product.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5">
+              <div class="mb-3">
+                <label for="productCategory" class="form-label"
+                  >Product Category</label
+                >
+                <select
+                  class="form-select"
+                  id="productCategory"
+                  aria-describedby="productCategoryHelp"
+                  formControlName="productCategory"
+                >
+                  <option selected disabled>Select category</option>
+                  <option value="1">Pens</option>
+                  <option value="2">Pencils</option>
+                  <option value="3">Notebooks</option>
+                  <!-- Add more categories as needed -->
+                </select>
+                <div id="productCategoryHelp" class="form-text">
+                  Select the category of the product.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="mb-3">
+                <label for="productQuantity" class="form-label"
+                  >Product Quantity</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="productQuantity"
+                  aria-describedby="productQuantityHelp"
+                  formControlName="productQuantity"
+                />
+                <div id="productQuantityHelp" class="form-text">
+                  Enter the quantity of the product available.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5">
+              <div class="mb-3">
+                <label for="productBrand" class="form-label"
+                  >Product Brand</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="productBrand"
+                  aria-describedby="productBrandHelp"
+                  formControlName="productBrand"
+                />
+                <div id="productBrandHelp" class="form-text">
+                  Enter the brand of the product.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="mb-3">
+                <label for="productMaterial" class="form-label"
+                  >Product Material</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="productMaterial"
+                  aria-describedby="productMaterialHelp"
+                  formControlName="productMaterial"
+                />
+                <div id="productMaterialHelp" class="form-text">
+                  Enter the material of the product.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-10">
+              <div class="mb-3">
+                <label for="productDescription" class="form-label"
+                  >Product Description</label
+                >
+                <textarea
+                  class="form-control"
+                  id="productDescription"
+                  rows="3"
+                  formControlName="productDescription"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

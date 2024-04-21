@@ -1,0 +1,296 @@
+<!-- Start Header -->
+<header>
+  <!-- NavBar Added -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" routerLink="home">
+        <img
+          src="assets/images/logos/logo.png"
+          alt="Stationery Shop Logo"
+          height="80"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Categories
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#pens&pencils">Pens & Pencils</a></li>
+              <li><a class="dropdown-item" href="#notebooks">Notebooks</a></li>
+              <li><a class="dropdown-item" href="#">Stationery Sets</a></li>
+              <!-- Add more categories as needed -->
+            </ul>
+          </li>
+          
+        </ul>
+        <div class="d-flex">
+            <a href="#" class="btn btn-outline-dark me-2"><i class="lni lni-cart"></i> Cart</a>
+            <a routerLink="/login" class="btn btn-dark">Retailer Portal</a>
+        </div>
+        
+      </div>
+    </div>
+  </nav>
+
+  
+</header>
+
+<!-- End Header -->
+
+<!-- Start Main -->
+<main>
+  <!-- Carousel Added -->
+  <div class="container mt-30 mb-5" >
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      style="margin-top: 10%;"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner rounded-3" >
+        <div class="carousel-item active">
+          <div class="row panda-bg-info p-5 d-flex align-items-center" style="background-color: #e3f2fd;">
+            <div class="col-lg-7">
+              <h1 class="fw-bold mb-3">Elegant Fountain Pens</h1>
+              <p class="mb-4 text-black">
+                Explore our exquisite collection of fountain pens crafted for
+                the connoisseurs of fine writing. Experience the smooth flow of
+                ink on premium paper with our handpicked selection.
+              </p>
+              <!-- <h1 class="price fw-semibold text-black mb-12">$2 - $25</h1> -->
+              <button type="button" class="btn btn-primary">
+                Shop Now <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <div class="col-lg-5">
+              <img
+                src="assets/images/products/pens.png"
+                class="d-block w-100 mt-4"
+                alt="Elegant Fountain Pens"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row panda-bg-info p-5 d-flex align-items-center" style="background-color: #e3f2fd;">
+            <div class="col-lg-7">
+              <h1 class="fw-bold mb-3">Colorful Notebook Sets</h1>
+              <p class="mb-4">
+                Brighten up your workspace with our vibrant and stylish notebook
+                sets. Perfect for jotting down ideas, notes, and sketches, our
+                notebooks are designed to inspire creativity.
+              </p>
+              <!-- <h1 class="price fw-semibold">$10 - $30</h1> -->
+              <button type="button" class="btn btn-primary">
+                Shop Now <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <div class="col-lg-5">
+              <img
+                src="assets/images/products/notebook.png"
+                class="d-block w-100 mt-4"
+                alt="Colorful Notebook Sets"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row panda-bg-info p-5 d-flex align-items-center" style="background-color: #e3f2fd;">
+            <div class="col-lg-7">
+              <h1 class="fw-bold mb-3">Creative Stationery Accessories</h1>
+              <p class="mb-4 text-black">
+                Elevate your desk decor with our range of creative stationery
+                accessories. From elegant penholders to quirky paperweights, we
+                have everything you need to personalize your workspace.
+              </p>
+              <!-- <h1 class="price fw-semibold">$5 - $50</h1> -->
+              <button type="button" class="btn btn-primary">
+                Shop Now <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <div class="col-lg-5">
+              <img
+                src="assets/images/products/accessories.png"
+                class="d-block w-100 mt-4"
+                alt="Creative Stationery Accessories"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Category Shoes -->
+  <section class="all-categories">
+    <section id="pens&pencils" class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="fw-semibold mb-3">Pens & Pencils</h2>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+                <div class="card border-0 rounded-3 h-100">
+                    <img src="assets/images/products/pens.png" class="card-img-top" alt="Supply 350">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-semibold">Classic Fountain Pen</h5>
+                        <p class="card-text mt-4">
+                            Enhance your writing experience with our classic fountain pen. Crafted with precision and elegance, it's perfect for everyday use or special occasions.
+                        </p>
+                        <h5 class="price fw-semibold">$120</h5>
+                    </div>
+                    <div class="mb-4 mx-auto">
+                        <button type="button" class="btn btn-buy-now">
+                            Buy Now <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0 rounded-3 h-100">
+                    <img src="assets/images/products/pens.png" class="card-img-top" alt="Nike 360">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-semibold">Mechanical Pencil Set</h5>
+                        <p class="card-text mt-4">
+                            Our mechanical pencil set includes everything you need for precise and effortless writing. Say goodbye to sharpening and hello to convenience!
+                        </p>
+                        <h5 class="price fw-semibold">$35</h5>
+                    </div>
+                    <div class="mb-4 mx-auto">
+                        <button type="button" class="btn btn-buy-now">
+                            Buy Now <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0 rounded-3 h-100">
+                    <img src="assets/images/products/pens.png" class="card-img-top" alt="Red Airmax">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-semibold">Gel Pen Set</h5>
+                        <p class="card-text mt-4">
+                            Add a pop of color to your notes and drawings with our vibrant gel pen set. Smooth, quick-drying ink ensures clean lines every time.
+                        </p>
+                        <h5 class="price fw-semibold">$20</h5>
+                    </div>
+                    <div class="mb-4 mx-auto">
+                        <button type="button" class="btn btn-buy-now">
+                            Buy Now <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Category Backpack -->
+    <section id="notebooks" class="container mt-9">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="fw-semibold mb-3">Notebooks</h2>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+                <div class="card border-0 rounded-3 h-100">
+                    <img src="assets/images/products/notebook.png" class="card-img-top" alt="Classic Notebook">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-semibold">Classic Notebook</h5>
+                        <p class="card-text mt-4">
+                            Our classic notebook is perfect for jotting down ideas, sketches, and notes. With its durable cover and high-quality paper, it's a must-have for any creative mind.
+                        </p>
+                        <h5 class="price fw-semibold">$15</h5>
+                    </div>
+                    <div class="mb-4 mx-auto">
+                        <button type="button" class="btn btn-buy-now">
+                            Buy Now <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0 rounded-3 h-100">
+                    <img src="assets/images/products/notebook.png" class="card-img-top" alt="Eco-Friendly Notebook">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-semibold">Eco-Friendly Notebook</h5>
+                        <p class="card-text mt-4">
+                            Our eco-friendly notebook is made from recycled materials, making it both sustainable and stylish. Carry it with you everywhere and make a positive impact on the environment.
+                        </p>
+                        <h5 class="price fw-semibold">$20</h5>
+                    </div>
+                    <div class="mb-4 mx-auto">
+                        <button type="button" class="btn btn-buy-now">
+                            Buy Now <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0 rounded-3 h-100">
+                    <img src="assets/images/products/notebook.png" class="card-img-top" alt="Vintage Leather Notebook">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-semibold">Vintage Leather Notebook</h5>
+                        <p class="card-text mt-4">
+                            Our vintage leather notebook exudes sophistication and elegance. Handcrafted with care, it's the perfect companion for your daily journaling or creative writing sessions.
+                        </p>
+                        <h5 class="price fw-semibold">$30</h5>
+                    </div>
+                    <div class="mb-4 mx-auto">
+                        <button type="button" class="btn btn-buy-now">
+                            Buy Now <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+  </section>
+</main>
+<!-- End Main -->
