@@ -10,6 +10,11 @@ import { InvetoryChartComponent } from './pages/invetory-chart/invetory-chart.co
 import { SalesChartComponent } from './pages/sales-chart/sales-chart.component';
 import { SalesReportComponent } from './pages/sales-report/sales-report.component';
 import { HomeComponent } from './pages/home/home.component';
+import { OrdersListComponent } from './pages/orders-list/orders-list.component';
+import { SetPricesComponent } from './pages/set-prices/set-prices.component';
+import { AllInventoryComponent } from './pages/all-inventory/all-inventory.component';
+import { RetailerListComponent } from './pages/retailer-list/retailer-list.component';
+import { PricingControlComponent } from './pages/pricing-control/pricing-control.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -26,7 +31,12 @@ export const routes: Routes = [
       { path: 'add-product', component: UploadProductComponent },
       { path: 'inventory-chart', component: InvetoryChartComponent },
       { path: 'sales-chart', component: SalesChartComponent },
-      {path:'sales-report',component:SalesReportComponent}
+      {path:'sales-report',component:SalesReportComponent},
+      {path: 'orders',component:OrdersListComponent},
+      {path: 'set-price',component:SetPricesComponent},
+      {path: 'all-inventory',component:AllInventoryComponent},
+      {path: 'all-retailer', component:RetailerListComponent},
+      {path: 'pricing-control',component:PricingControlComponent}
     ],
   },
 ];
