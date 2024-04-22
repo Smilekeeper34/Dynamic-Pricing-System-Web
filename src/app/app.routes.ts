@@ -15,12 +15,22 @@ import { SetPricesComponent } from './pages/set-prices/set-prices.component';
 import { AllInventoryComponent } from './pages/all-inventory/all-inventory.component';
 import { RetailerListComponent } from './pages/retailer-list/retailer-list.component';
 import { PricingControlComponent } from './pages/pricing-control/pricing-control.component';
+import { ShopComponent } from './pages/shop/shop.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { PricingSectionComponent } from './pages/pricing-section/pricing-section.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'home', component: HomeComponent },
+  { path: 'shop', component: ShopComponent},
   { path: 'login', component: LoginComponent },
+  {path:'about',component:AboutComponent},
+  {path:'contact',component:ContactComponent},
+  {path:'pricing',component:PricingSectionComponent},
   { path: 'register', component: SignupComponent },
+  { path: 'cart', component: CartComponent },
   {
     path: 'admin',
     component: LayoutComponent,

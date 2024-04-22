@@ -1,0 +1,25 @@
+<app-header />
+
+
+<section class="cart" style="padding-top: 10%">
+    <h2>Shopping Cart</h2>
+
+    <div *ngIf="cartItems.length === 0; else cartTable">
+      Your cart is empty.
+    </div>
+    
+    <ng-template #cartTable>
+      <table class="table">
+        <tbody>
+          <tr *ngFor="let item of cartItems">
+            </tr>
+          <tr>
+            <td colspan="4" class="text-end">
+              Total: {{ getTotal() | currency }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </ng-template>
+    
+</section>
