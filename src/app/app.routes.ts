@@ -9,17 +9,17 @@ import { UploadProductComponent } from './pages/upload-product/upload-product.co
 import { InvetoryChartComponent } from './pages/invetory-chart/invetory-chart.component';
 import { SalesChartComponent } from './pages/sales-chart/sales-chart.component';
 import { SalesReportComponent } from './pages/sales-report/sales-report.component';
-import { HomeComponent } from './pages/home/home.component';
+import { HomeComponent } from './home-pages/home/home.component';
 import { OrdersListComponent } from './pages/orders-list/orders-list.component';
 import { SetPricesComponent } from './pages/set-prices/set-prices.component';
 import { AllInventoryComponent } from './pages/all-inventory/all-inventory.component';
 import { RetailerListComponent } from './pages/retailer-list/retailer-list.component';
 import { PricingControlComponent } from './pages/pricing-control/pricing-control.component';
-import { ShopComponent } from './pages/shop/shop.component';
-import { AboutComponent } from './pages/about/about.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { PricingSectionComponent } from './pages/pricing-section/pricing-section.component';
-import { CartComponent } from './pages/cart/cart.component';
+import { ShopComponent } from './home-pages/shop/shop.component';
+import { AboutComponent } from './home-pages/about/about.component';
+import { ContactComponent } from './home-pages/contact/contact.component';
+import { PricingSectionComponent } from './home-pages/pricing-section/pricing-section.component';
+import { CartComponent } from './home-pages/cart/cart.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent},

@@ -1,0 +1,52 @@
+<app-header />
+<main>
+  <section
+    class="all-categories mt-30 mb-5 body-wrapper"
+    style="padding-top: 7%"
+  >
+    <div class="container-fluid">
+      <div class="row text-center" *ngIf="products.length > 0; else noProducts">
+        <div class="col-sm-6 col-xl-3" *ngFor="let product of products">
+          <div class="card overflow-hidden rounded-2">
+            <div class="position-relative">
+              <a href="javascript:void(0)">
+                <img
+                  src="../assets/images/products/pens.png"
+                  class="card-img-top rounded-0"
+                  alt="..."
+                />
+              </a>
+              
+            </div>
+            <div class="card-body pt-3 p-4">
+              <h6 class="fw-semibold fs-4">{{ product.name }}</h6>
+              <p class="fw-semibold fs-4">{{ product.description }}</p>
+              @if(product.status=='IN_STOCK'){
+              <span class="badge rounded-pill text-bg-light"
+                >In Stock - {{ product.currency }} ${{
+                  product.sellingPrice
+                }}</span
+              >
+
+              } @else{
+              <span class="badge rounded-pill text-bg-danger"
+                >Out Of Stock</span
+              >
+
+              }
+              <button class="btn btn-success btn-block mt-3" (click)="addToCart(product)">Buy Now</button>
+
+            </div>
+          </div>
+          <div class="button">
+          </div>
+        </div>
+      </div>
+      <ng-template #noProducts>
+        <div class="col-12 text-center">
+          <h3>No products in stock</h3>
+        </div>
+      </ng-template>
+    </div>
+  </section>
+</main>

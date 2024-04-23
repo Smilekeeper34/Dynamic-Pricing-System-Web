@@ -25,17 +25,20 @@
                       <h6 class="fw-semibold mb-0">Stock Level</h6>
                     </th>
                     <th class="border-bottom-0">
-                      <h6 class="fw-semibold mb-0">Price</h6>
+                      <h6 class="fw-semibold mb-0">SET Price</h6>
+                    </th>
+                    <th class="border-bottom-0">
+                      <h6 class="fw-semibold mb-0">Selling Price Price</h6>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr *ngFor="let product of products">
                     <td class="border-bottom-0">
-                      <h6 class="fw-semibold mb-0">{{ product.productId }}</h6>
+                      <h6 class="fw-semibold mb-0">{{ product.productCode }}</h6>
                     </td>
                     <td class="border-bottom-0">
-                      <span class="fw-normal">{{ product.productName }}</span>
+                      <span class="fw-normal">{{ product.name }}</span>
                     </td>
                     <td class="border-bottom-0">
                       <p class="mb-0 fw-normal">{{ product.description }}</p>
@@ -48,19 +51,21 @@
                         <span
                           [ngClass]="{
                             'badge bg-success fw-semibold rounded-3':
-                              product.stockLevel === 'High',
+                            product.status=='IN_STOCK',
                             'badge bg-warning fw-semibold rounded-3':
-                              product.stockLevel === 'Medium',
-                            'badge bg-danger fw-semibold rounded-3':
-                              product.stockLevel === 'Low'
+                              product.status === 'OUT_OF_STOCK',
+                            
                           }"
-                          >{{ product.stockLevel }}</span
+                          >{{ product.status }}</span
                         >
                       </div>
                     </td>
 
                     <td class="border-bottom-0">
-                      <h6 class="fw-semibold mb-0 fs-4">{{ product.price }}</h6>
+                      <h6 class="fw-semibold mb-0 fs-4">{{ product.costPrice }}</h6>
+                    </td>
+                    <td class="border-bottom-0">
+                      <h6 class="fw-semibold mb-0 fs-4">{{ product.sellingPrice }}</h6>
                     </td>
                   </tr>
                 </tbody>

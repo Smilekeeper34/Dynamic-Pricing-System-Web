@@ -20,7 +20,29 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-2">
+              <div class="mb-3">
+                <label for="productCategory" class="form-label"
+                  >Product Currency</label
+                >
+                <select
+                  class="form-select"
+                  id="productCurrency"
+                  aria-describedby="productCategoryHelp"
+                  formControlName="productCurrency"
+                >
+                  <option selected disabled>Select Currency</option>
+                  <option value="USD">USD</option>
+                  <option value="ZiG" class="disabled" disabled>ZiG</option>
+                
+                  <!-- Add more categories as needed -->
+                </select>
+                <div id="productCategoryHelp" class="form-text">
+                  Select the currency of the product.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
               <div class="mb-3">
                 <label for="productPrice" class="form-label"
                   >Product Price</label
@@ -37,6 +59,7 @@
                 </div>
               </div>
             </div>
+
           </div>
           <div class="row">
             <div class="col-md-5">
@@ -51,9 +74,9 @@
                   formControlName="productCategory"
                 >
                   <option selected disabled>Select category</option>
-                  <option value="1">Pens</option>
-                  <option value="2">Pencils</option>
-                  <option value="3">Notebooks</option>
+                  <option value="PENS_PENCILS">Pens And Pencils</option>
+                  <option value="NOTEBOOKS">Notebooks</option>
+                  <option value="STATIONERY_SETS">Bond Paper</option>
                   <!-- Add more categories as needed -->
                 </select>
                 <div id="productCategoryHelp" class="form-text">
@@ -75,42 +98,6 @@
                 />
                 <div id="productQuantityHelp" class="form-text">
                   Enter the quantity of the product available.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-5">
-              <div class="mb-3">
-                <label for="productBrand" class="form-label"
-                  >Product Brand</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="productBrand"
-                  aria-describedby="productBrandHelp"
-                  formControlName="productBrand"
-                />
-                <div id="productBrandHelp" class="form-text">
-                  Enter the brand of the product.
-                </div>
-              </div>
-            </div>
-            <div class="col-md-5">
-              <div class="mb-3">
-                <label for="productMaterial" class="form-label"
-                  >Product Material</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="productMaterial"
-                  aria-describedby="productMaterialHelp"
-                  formControlName="productMaterial"
-                />
-                <div id="productMaterialHelp" class="form-text">
-                  Enter the material of the product.
                 </div>
               </div>
             </div>

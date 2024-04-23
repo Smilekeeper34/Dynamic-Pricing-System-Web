@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 
 interface CartItem {
@@ -17,7 +18,7 @@ interface Product {
 })
 export class CartService {
 
-  private cartItemsSubject = new BehaviorSubject<CartItem[]>([]);
+  public cartItemsSubject = new BehaviorSubject<CartItem[]>([]);
   cartItems$ = this.cartItemsSubject.asObservable();
 
   // Discount rules
@@ -27,22 +28,24 @@ export class CartService {
     { quantityThreshold: 10, discountPercentage: 15 } 
   ];
 
-  constructor() {}
+  constructor(private router:Router) {}
 
   getCartItems(): CartItem[] {
     return this.cartItemsSubject.getValue();
   }
 
-  addToCart(product: Product) {
+  addToCart(product: any) {
     const existingIndex = this.cartItemsSubject.getValue().findIndex(item => item.product.id === product.id);
 
     if (existingIndex >= 0) {
       this.cartItemsSubject.getValue()[existingIndex].quantity++;
     } else {
-      this.cartItemsSubject.getValue().push({ product, quantity: 1 });
+      this.cartItemsSubject.getValue().push(product);
     }
 
     this.cartItemsSubject.next(this.cartItemsSubject.getValue());
+    
+    this.router.navigate(['/cart']);
   }
 
   removeFromCart(cartItem: CartItem) {

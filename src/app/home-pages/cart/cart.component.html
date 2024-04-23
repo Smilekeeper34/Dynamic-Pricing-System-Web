@@ -1,0 +1,90 @@
+<app-header />
+
+<section class="cart" style="padding-top: 5%;">
+  
+  <main>
+    <div class="container mt-5 p-3 rounded cart">
+      <div class="row no-gutters">
+        <div class="col-md-8">
+          <div class="product-details mr-2">
+            <div class="d-flex flex-row align-items-center" style="cursor: pointer;" routerLink="/shop">
+              <i class="fa fa-long-arrow-left"></i
+              ><span class="ml-2">Continue Shopping</span>
+            </div>
+            <hr />
+            <h6 class="mb-0">Shopping cart</h6>
+            <div class="d-flex justify-content-between">
+              <span>{{products.length}}</span>
+              <div class="d-flex flex-row align-items-center">
+                <span class="text-black-50">Sort by:</span>
+                <div class="price ml-2">
+                  <span class="mr-1">Unit Price</span
+                  ><i class="fa fa-angle-down"></i>
+                </div>
+              </div>
+            </div>
+            <div
+              class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded" *ngFor="let product of products"
+            >
+              <div class="d-flex flex-row">
+                
+                <div class="ml-2">
+                  <span class="font-weight-bold d-block">{{product.name}}</span
+                  ><span class="spec">{{product.description}}</span>
+                </div>
+              </div>
+              <div class="d-flex flex-row align-items-center">
+                <span class="d-block ml-5 font-weight-bold">{{product.currency}}</span
+                >
+                <span class="d-block ml-5 font-weight-bold">{{product.sellingPrice}}</span
+                >
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="payment-info">
+            <div class="d-flex justify-content-between align-items-center">
+              <span>Process Payment</span
+              >
+            </div>
+            
+            <div>
+              <form [formGroup]="cartForm">
+                <label class="credit-card-label">Quantity</label
+                  ><input
+                    type="text"
+                    class="form-control credit-inputs"
+                    placeholder="1"
+                    formControlName="quantity"
+                  />
+                
+              </form>
+            </div>
+            
+            
+            <hr class="line" />
+            <div class="d-flex justify-content-between information">
+              <span>Subtotal</span><span>{{subTotal}}</span>
+            </div>
+            <div class="d-flex justify-content-between information">
+              <span>Discounts</span><span>{{discount}}</span>
+            </div>
+            <div class="d-flex justify-content-between information">
+              <span>Total(Incl. Discounts)</span><span>{{totalAmount}}</span>
+            </div>
+            <button
+              class="btn btn-primary btn-block d-flex justify-content-between mt-3"
+              type="button"
+              (click)="onSubmit()"
+            >
+              <span></span
+              ><span>Checkout<i class="fa fa-long-arrow-right ml-1"></i></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>

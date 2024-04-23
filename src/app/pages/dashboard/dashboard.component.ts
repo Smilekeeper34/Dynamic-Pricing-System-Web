@@ -1,13 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SidebarComponent } from "../../shared/sidebar/sidebar.component";
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { UserService } from '../../tools/services/user.service';
+import { AuthService } from '../../tools/services/auth.service';
 
 @Component({
     selector: 'app-dashboard',
     standalone: true,
     templateUrl: './dashboard.component.html',
     styleUrl: './dashboard.component.scss',
-    imports: [SidebarComponent]
+    imports: [SidebarComponent,CommonModule,FormsModule]
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
+    currentUser: any;
 
+    constructor(private userService: UserService,public authService: AuthService,){}
+    ngOnInit(): void {
+        this.authService.isLoggedIn()
+    }
+    
 }
