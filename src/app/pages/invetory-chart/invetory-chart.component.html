@@ -1,15 +1,19 @@
 <div class="body-container">
   <div class="container-fluid">
     <div class="card">
-      <div id="chart">
-        <apx-chart
-          [series]="chartOptions.series"
-          [chart]="chartOptions.chart"
-          
-          [plotOptions]="chartOptions.plotOptions"
-          [xaxis]="chartOptions.xaxis"
-        ></apx-chart>
-      </div>
+      
+      <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [xaxis]="chartOptions.xaxis"
+        [stroke]="chartOptions.stroke"
+        [dataLabels]="chartOptions.dataLabels"
+        [yaxis]="chartOptions.yaxis"
+        [title]="chartOptions.title"
+        [subtitle]="chartOptions.subtitle"
+        [labels]="chartOptions.labels"
+        [legend]="chartOptions.legend"
+      ></apx-chart>
     </div>
   </div>
 </div>

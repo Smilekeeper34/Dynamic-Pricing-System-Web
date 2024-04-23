@@ -9,10 +9,13 @@ import { HttpClientModule } from '@angular/common/http';
 export class ProductService {
 
   private apiUrl = 'https://econimic-pricing.onrender.com/api/v1/product/list';
-
+  private salesUrl ='https://econimic-pricing.onrender.com/api/v1/sales/list';
   constructor(private http: HttpClient) { }
 
   getProductList(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
+  }
+  getSalesList():Observable<any>{
+    return this.http.get<any>(this.salesUrl);
   }
 }
