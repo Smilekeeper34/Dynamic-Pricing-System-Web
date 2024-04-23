@@ -1,0 +1,12 @@
+<h2>Order Receipt</h2>
+
+<ul>
+  <li *ngFor="let product of orderDetails.products">
+    {{ product.name }} - {{ product.sellingPrice | currency }}
+  </li>
+</ul>
+
+<!-- <p>Subtotal: {{ orderDetails.subTotal | currency }}</p> -->
+<p>Discount: {{ orderDetails.discount }} {{ orderDetails.discountType === 'percentage' ? '%' : '$' }}</p>
+<p>Total: {{ orderDetails.subTotal | currency }}</p>
+
