@@ -22,14 +22,25 @@ export class CartComponent {
 discount: any;
   constructor(private cartService: CartService,private fb: FormBuilder,private http: HttpClient) {
     this.cartForm = this.fb.group({
-      quantity: ['', Validators.required],});
+      quantity: ['1', Validators.required],});
+
+      this.cartForm.get('quantity').valueChanges.subscribe((value) => {
+        this.updateSubTotal();
+      });
   }
 
   ngOnInit(): void {
     this.cartService.cartItemsSubject.subscribe((data) => {
       this.products = data;
-      // console.log(this.products[0].productCode);
+      this.updateSubTotal();
     });
+  }
+  updateSubTotal() {
+    if (this.products && this.products.length > 0) {
+      const quantity = this.cartForm.value.quantity;
+      const sellingPrice = this.products[0].sellingPrice;
+      this.subTotal = sellingPrice * quantity;
+    }
   }
   onSubmit() {
     const productCode = this.products[0].productCode ;
@@ -70,4 +81,6 @@ discount: any;
       }
     });
   }
+
+  
 }
