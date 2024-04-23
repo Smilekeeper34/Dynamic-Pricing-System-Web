@@ -43,7 +43,7 @@
                 ink on premium paper with our handpicked selection.
               </p>
               <!-- <h1 class="price fw-semibold text-black mb-12">$2 - $25</h1> -->
-              <button type="button" class="btn btn-primary">
+              <button type="button" class="btn btn-primary" routerLink="/shop">
                 Shop Now <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
@@ -66,7 +66,7 @@
                 notebooks are designed to inspire creativity.
               </p>
               <!-- <h1 class="price fw-semibold">$10 - $30</h1> -->
-              <button type="button" class="btn btn-primary">
+              <button type="button" class="btn btn-primary" routerLink="/shop">
                 Shop Now <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
@@ -89,7 +89,7 @@
                 have everything you need to personalize your workspace.
               </p>
               <!-- <h1 class="price fw-semibold">$5 - $50</h1> -->
-              <button type="button" class="btn btn-primary">
+              <button type="button" class="btn btn-primary" routerLink="/shop">
                 Shop Now <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
@@ -106,39 +106,6 @@
     </div>
   </div>
   <!-- Category Shoes -->
-  <section class="all-categories mt-30 mb-5 body-wrapper" style="padding-top: 7%">
-    <div class="container-fluid">
-      <div class="row" *ngIf="products.length > 0; else noProducts">
-        <div class="col-sm-6 col-xl-3" *ngFor="let product of products">
-          <div class="card overflow-hidden rounded-2">
-            <div class="position-relative">
-              <a href="javascript:void(0)">
-                <img src="../assets/images/products/pens.png" class="card-img-top rounded-0" alt="...">
-              </a>
-              <a class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3"
-                data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart" (click)="addToCart(product)">
-                <i class="lni lni-shopping-basket"></i>
-              </a>
-            </div>
-            <div class="card-body pt-3 p-4">
-              <h6 class="fw-semibold fs-4">{{product.name}}</h6>
-              <div class="d-flex align-items-center justify-content-between">
-                <h5 class="fw-semibold fs-4">{{product.category}}</h5>
-                <h6 class="fw-semibold fs-4 mb-0">
-                  ${{product.sellingPrice}}
-                  <!-- <span class="ms-2 fw-normal text-muted fs-3"><del>${{product.oldPrice}}</del></span> -->
-                </h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <ng-template #noProducts>
-        <div class="col-12 text-center">
-          <h3>No products in stock</h3>
-        </div>
-      </ng-template>
-    </div>
-  </section>
+  
 </main>
 <!-- End Main -->

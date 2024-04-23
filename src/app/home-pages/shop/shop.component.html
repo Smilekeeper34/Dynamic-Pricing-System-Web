@@ -9,14 +9,35 @@
         <div class="col-sm-6 col-xl-3" *ngFor="let product of products">
           <div class="card overflow-hidden rounded-2">
             <div class="position-relative">
-              <a href="javascript:void(0)">
+              <a >
                 <img
-                  src="../assets/images/products/pens.png"
-                  class="card-img-top rounded-0"
-                  alt="..."
+                  *ngIf="product.category === 'PENS_PENCILS'"
+                  src="assets/images/products/pens-pencils.jpg"
+                  class="category-image"
+                  alt="Pens and Pencils"
+                />
+
+                <img
+                  *ngIf="product.category === 'STATIONERY_SETS'"
+                  src="assets/images/products/bondpaper.png"
+                  class="category-image"
+                  alt="Stationery Sets"
+                />
+
+                <img
+                  *ngIf="product.category === 'NOTE_BOOKS'"
+                  src="assets/images/products/notebooks.jpg"
+                  class="category-image"
+                  alt="Notebooks"
+                />
+
+                <img
+                  *ngIf="product.category === 'BOND_PAPER'"
+                  src="assets/images/products/bond-paper.png"
+                  class="category-image"
+                  alt="Bond Paper"
                 />
               </a>
-              
             </div>
             <div class="card-body pt-3 p-4">
               <h6 class="fw-semibold fs-4">{{ product.name }}</h6>
@@ -34,12 +55,15 @@
               >
 
               }
-              <button class="btn btn-success btn-block mt-3" (click)="addToCart(product)">Buy Now</button>
-
+              <button
+                class="btn btn-success btn-block mt-3"
+                (click)="addToCart(product)"
+              >
+                Buy Now
+              </button>
             </div>
           </div>
-          <div class="button">
-          </div>
+          <div class="button"></div>
         </div>
       </div>
       <ng-template #noProducts>
