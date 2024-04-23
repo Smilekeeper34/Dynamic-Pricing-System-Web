@@ -58,7 +58,7 @@ discount: any;
               // Handle success response if needed
               console.log('Sold item updated successfully:', response);
               // Optionally, show a success message using SweetAlert
-              Swal.fire('Success', 'Sold item updated successfully', 'success');
+              Swal.fire('Success', ' Item Sold successfully', 'success');
             },
             (error) => {
               // Handle error response if needed
