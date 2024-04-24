@@ -30,7 +30,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CartComponent implements OnInit {
   products: any[] = [];
-
+  discountQuantity: any;
   totalAmount: any;
   subTotal: any;
   cartForm: FormGroup;
@@ -69,7 +69,18 @@ export class CartComponent implements OnInit {
     });
   }
   applyDiscountOnQuantityChange() {
+    // First, attempt to apply any existing discount code
     this.applyDiscountCode();
+
+    // If no valid discount code was applied, check quantity for percentage discount
+    if (this.discountType === '') {
+      if (this.cartForm.value.quantity > 4) {
+        this.discountType = 'percentage';
+      }
+    }
+
+    // Ensure subTotal is recalculated after potential discount changes
+    this.updateSubTotal();
   }
   updateSubTotal() {
     if (this.products && this.products.length > 0) {
@@ -77,14 +88,13 @@ export class CartComponent implements OnInit {
       const originalPrice = this.products[0].sellingPrice;
       let subTotal = originalPrice * quantity;
 
+      // Apply discount based on updated discountType
       if (this.discountType === 'percentage') {
         subTotal -= (subTotal * this.discount) / 100;
       } else if (this.discountType === 'fixed') {
         subTotal -= this.discount;
-      } else {
-        // If no discount applied, use original selling price * quantity
-        subTotal = originalPrice * quantity;
       }
+      console.log(this.discountType);
 
       this.subTotal = subTotal;
     }
@@ -97,11 +107,14 @@ export class CartComponent implements OnInit {
     if (discount) {
       this.discount = discount.value;
       this.discountType = discount.type;
-      
     } else {
+      if (this.cartForm.value.quantity > 4) {
+        this.discountType = 'percentage';
+        this.discount=10
+      }
       // Handle invalid code - perhaps with a Swal.fire error message
-      this.discount = 0; // If discount code is not found, reset discount
-    this.discountType ='';
+      // this.discount = 0; // If discount code is not found, reset discount
+      // this.discountType = '';
     }
     this.updateSubTotal();
   }
