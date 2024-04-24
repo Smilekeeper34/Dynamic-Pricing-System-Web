@@ -57,31 +57,55 @@
 
             <div>
               <form [formGroup]="cartForm">
-                <label class="credit-card-label">Quantity</label
-                ><input
-                  type="text"
-                  class="form-control credit-inputs"
-                  placeholder="1"
-                  formControlName="quantity"
-                />
+                <div class="row">
+                  <div class="col-7">
+                    <label class="credit-card-label">Quantity</label
+                    ><input
+                      type="text"
+                      class="form-control credit-inputs col-10"
+                      placeholder="1"
+                      formControlName="quantity"
+                      (input)="applyDiscountOnQuantityChange()"
+                    />
+                  </div>
+                </div>
               </form>
             </div>
-            <label class="credit-card-label text-xl-center">Product Discount Code</label
-              ><br>
-            <input type="text" placeholder="Discount Code" [(ngModel)]="discountCode">
-            <button (click)="applyDiscountCode()">Apply</button>
+            <label class="credit-card-label text-xl-center"
+              >Product Discount Code</label
+            ><br />
+            <div class="row">
+              <div class="col-7">
+                <input
+                  type="text"
+                  class="form-control credit-inputs"
+                  placeholder="Discount Code"
+                  [(ngModel)]="discountCode"
+                />
+                
+              </div>
+              <div class="col-4">
+                <button class="btn btn-outline-secondary" (click)="applyDiscountCode()">Apply</button>
+              </div>
+            </div>
+
             <hr class="line" />
             <div class="d-flex justify-content-between information">
-              <span>Quantity</span><span>{{cartForm.value.quantity }}</span>
+              <span>Quantity</span><span>{{ cartForm.value.quantity }}</span>
             </div>
             <div class="d-flex justify-content-between information">
-              <span>Item Price</span><span>{{totalAmount | currency  }}</span>
+              <span>Item Price</span><span>{{ totalAmount | currency }}</span>
             </div>
             <div class="d-flex justify-content-between information">
-              <span>Discounts</span><span>{{ discount }} ,  {{ discountType === 'percentage' ? '%' : '$' }}</span>
+              <span>Discounts</span
+              ><span
+                >{{ discount }} ,
+                {{ discountType === "percentage" ? "%" : "$" }}</span
+              >
             </div>
             <div class="d-flex justify-content-between information">
-              <span>Total(Incl. Discounts)</span><span>{{ subTotal | currency  }}</span>
+              <span>Total(Incl. Discounts)</span
+              ><span>{{ subTotal | currency }}</span>
             </div>
             <button
               class="btn btn-primary btn-block d-flex justify-content-between mt-3"
