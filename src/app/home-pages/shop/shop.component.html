@@ -11,14 +11,49 @@
             <div class="position-relative">
               <a >
                 <img
-                  *ngIf="product.category === 'PENS_PENCILS'"
+                  *ngIf="product.name === 'Typek Bond Paper'"
+                  src="assets/images/products/Typek Bond Paper.jpg"
+                  class="category-image"
+                  alt="Pens and Pencils"
+                />
+                <img
+                  *ngIf="product.name === 'Evershap Pen'"
+                  src="assets/images/products/Evershap Pen.png"
+                  class="category-image"
+                  alt="Pens and Pencils"
+                />
+                <img
+                  *ngIf="product.name === 'Claro Pen'"
+                  src="assets/images/products/Claro Pen.jpg"
+                  class="category-image"
+                  alt="Pens and Pencils"
+                />
+                <img
+                  *ngIf="product.name === 'HB Pencils'"
+                  src="assets/images/products/HB Pencil.jpg"
+                  class="category-image"
+                  alt="Pens and Pencils"
+                />
+                <img
+                  *ngIf="product.name === 'Biic'"
+                  src="assets/images/products/Biic.jpg"
+                  class="category-image"
+                  alt="Pens and Pencils"
+                />
+                <img
+                  *ngIf="product.name === 'elegant fountain pens'"
                   src="assets/images/products/elegant_pen.jpg"
                   class="category-image"
                   alt="Pens and Pencils"
                 />
-
                 <img
-                  *ngIf="product.category === 'STATIONERY_SETS'"
+                  *ngIf="product.name === 'Bond Paper Rotazi'"
+                  src="assets/images/products/bondpaper.png"
+                  class="category-image"
+                  alt="Stationery Sets"
+                />
+                <img
+                  *ngIf="product.name === 'Bond Paper'"
                   src="assets/images/products/bondpaper.png"
                   class="category-image"
                   alt="Stationery Sets"
@@ -29,13 +64,6 @@
                   src="assets/images/products/notebooks.jpg"
                   class="category-image"
                   alt="Notebooks"
-                />
-
-                <img
-                  *ngIf="product.category === 'BOND_PAPER'"
-                  src="assets/images/products/bond-paper.png"
-                  class="category-image"
-                  alt="Bond Paper"
                 />
               </a>
             </div>

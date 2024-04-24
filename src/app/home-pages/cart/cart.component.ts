@@ -152,7 +152,7 @@ export class CartComponent implements OnInit {
               // Handle error response if needed
               console.error('Error updating sold item:', error);
               // Optionally, show an error message using SweetAlert
-              Swal.fire('Error', 'Failed to update sold item', 'error');
+              Swal.fire('Error', 'Quantity greater than one in stock','error');
             }
           );
         // Store the necessary details
