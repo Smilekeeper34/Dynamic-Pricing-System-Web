@@ -105,7 +105,83 @@
       </div>
     </div>
   </div>
+ 
   <!-- Category Shoes -->
-  
+  <section
+    class="all-categories mt-30 mb-5 body-wrapper"
+    style="padding-top: 7%;text-align: center;"
+  >
+  <div class="text-align-center justify-content-center">
+    <h2 class="heading">Products Available</h2>
+  </div>
+    <div class="container-fluid">
+      <div class="row text-center" *ngIf="products.length > 0; else noProducts">
+        <div class="col-sm-6 col-xl-3" *ngFor="let product of products">
+          <div class="card overflow-hidden rounded-2">
+            <div class="position-relative">
+              <a >
+                <img
+                  *ngIf="product.category === 'PENS_PENCILS'"
+                  src="assets/images/products/pens-pencils.jpg"
+                  class="category-image"
+                  alt="Pens and Pencils"
+                />
+
+                <img
+                  *ngIf="product.category === 'STATIONERY_SETS'"
+                  src="assets/images/products/bondpaper.png"
+                  class="category-image"
+                  alt="Stationery Sets"
+                />
+
+                <img
+                  *ngIf="product.category === 'NOTE_BOOKS'"
+                  src="assets/images/products/notebooks.jpg"
+                  class="category-image"
+                  alt="Notebooks"
+                />
+
+                <img
+                  *ngIf="product.category === 'BOND_PAPER'"
+                  src="assets/images/products/bond-paper.png"
+                  class="category-image"
+                  alt="Bond Paper"
+                />
+              </a>
+            </div>
+            <div class="card-body pt-3 p-4">
+              <h6 class="fw-semibold fs-4">{{ product.name }}</h6>
+              <p class="fw-semibold fs-4">{{ product.description }}</p>
+              @if(product.status=='IN_STOCK'){
+              <span class="badge rounded-pill text-bg-light"
+                >In Stock - {{ product.currency }} ${{
+                  product.sellingPrice
+                }}</span
+              >
+
+              } @else{
+              <span class="badge rounded-pill text-bg-danger"
+                >Out Of Stock</span
+              >
+
+              }
+              <button
+                class="btn btn-success btn-block mt-3"
+                (click)="addToCart(product)"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+          <div class="button"></div>
+        </div>
+      </div>
+      <ng-template #noProducts>
+        <div class="col-12 text-center">
+          <h3>No products in stock</h3>
+        </div>
+      </ng-template>
+    </div>
+  </section>
 </main>
 <!-- End Main -->
